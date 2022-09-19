@@ -1,24 +1,29 @@
 package Poo;
-public class Cachorro extends Animal { // An+CTRL+ESPAÇO
+public class Cachorro extends Animal {  
 
-	private String correr;
-
-	public Cachorro(String nome, int idade, String som, String correr) {
-		super(nome, idade, som);
-		this.correr = correr;
+	public Cachorro (String nome,int  Idade) {
+		super(nome,Idade);
+		
 	}
-
-	public String getCorrer() {
-		return correr;
+	@Override
+	public void somAnimal() {
+		System.out.println("\nDoguinho gosta de latir: au au au");
 	}
-
-	public void setCorrer(String correr) {
-		this.correr = correr;
+	@Override
+	public void movimento() {
+		System.out.println("\nCorre doguinho");
+		
+	}
+	public void imprimiInfo() {
+		System.out.println("\nNome do doguinho: "+getNome());
+		System.out.println("\nIdade do doguinho: "+getIdade());
+		somAnimal();
+		movimento();
+	
+		
+		
 	}
 	
-	public void imprimiInfo(){
-		System.out.println("\nNome: "+getNome()+"\nIdade: "+getIdade()+"\nBarulho que ele faz: "+getSom()+"\nEsse animal faz o que? "+getCorrer());
-		
-		
-	}
+	
+
 }

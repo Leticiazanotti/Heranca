@@ -4,24 +4,29 @@ public class Cavalo extends Animal{
 
 	private String correr;
 	
-	public Cavalo (String nome,int idade,String som,String correr) {
-		super (nome,idade,som);
-		this.correr = correr;
+	public Cavalo (String nome,int Idade) {
+		super (nome,Idade);
+	}
+	@Override
+	public void somAnimal() {
+		System.out.println("\nO cavalinho relincha");
+	}
+	@Override
+	public void movimento() {
+		System.out.println("\nCorre pocotó");
 		
-	}
-
-	public String getCorrer() {
-		return correr;
-	}
-
-	public void setCorrer(String correr) {
-		this.correr = correr;
 	}
 	public void imprimiInfo() {
-		System.out.println("\nNome: "+getNome()+"\nIdade: "+getIdade()+"\nSom do animal: "+getSom()+"\nO que esse animal faz?"+getCorrer());
-	}
-
+		System.out.println("\nNome do cavalo: "+getNome());
+		System.out.println("\nIdade do cavalo: "+getIdade());
+		somAnimal();
+		movimento();
 	
 		
+		
+	
+
+	
+	}
 	
 }	

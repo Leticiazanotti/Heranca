@@ -4,22 +4,28 @@ public class Preguica extends Animal{
 	
 	private String subirArvore;
 	
-	public Preguica(String nome,int idade,String som,String subirArvore) {
-		super(nome,idade,som);
-		this.subirArvore = subirArvore;
-			
+	public Preguica(String nome,int idade) {
+		super(nome,idade);
 	}
-
-	public String getSubirArvore() {
-		return subirArvore;
+	
+	@Override
+	public void somAnimal() {
+		System.out.println("\nA preguiça grita");
 	}
-
-	public void setSubirArvore(String subirArvore) {
-		this.subirArvore = subirArvore;
-	}
-	public void imprimiInfo() {
-		System.out.println("\nNome: "+getNome()+"\nIdade do animal: "+getIdade()+"\nSom do animal: "+getSom()+"\nO que esse animal deve fazer? "+getSubirArvore());
-	}
+	@Override
+	public void movimento() {
+		System.out.println("\nA preguiça sobe em arvore");
+		
+		
+	} 
+	 public void imprimiInfo() {
+		 System.out.println("O nome da preguiça é: "+getNome());
+		 System.out.println("\nIdade: "+getIdade());
+		 somAnimal();
+		 movimento();
+	 }
+	 
+	
 	
 
 	
